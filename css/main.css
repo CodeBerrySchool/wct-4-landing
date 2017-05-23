@@ -8,6 +8,14 @@
   box-sizing: border-box;
 }
 
+/* Single-direction margin declaration to establish vertical rhythm. */
+h1,h2,h3,
+ul,ol,
+p,
+img {
+    margin-bottom: 1.5rem;
+}
+
 body {
   background: url('../images/wedding-landing-background.png') repeat center;
   font-family: 'Libre Baskerville', serif;
@@ -50,14 +58,6 @@ a:hover {
   transition: color .15s ease-in-out;
 }
 
-/* Single-direction margin declaration to establish vertical rhythm. */
-h1,h2,h3,
-ul,ol,
-p,
-img {
-    margin-bottom: 1.5rem;
-}
-
 /* =============================
 
     HEADER STYLES
@@ -65,12 +65,19 @@ img {
 =============================*/
 
 .cover {
-  background: url('../images/wedding-landing-cover.jpg') no-repeat center;
-  background-size: cover;
+  background: url('../images/wedding-landing-cover.jpg') no-repeat 70% center/cover;
   display: table;
   text-align: center;
   height: 100vh;
   width: 100vw;
+}
+
+@media (min-width: 768px) {
+
+  .cover {
+    background: url('../images/wedding-landing-cover.jpg') no-repeat center/cover;
+  }
+
 }
 
 .hero-text-wrapper {
@@ -85,8 +92,27 @@ img {
   background: hsla(100,0%,0%,.5);
 }
 
+.hero-text h1 {
+  font-size: 3.15rem;
+  color: #d2ba87;
+  margin-bottom: 0; /* To negate the effect of the single-direction margin declaration. */
+}
+
+@media (min-width: 768px) {
+
+  .hero-text {
+    padding: 1.25rem;
+    border-radius: 4px;
+    width: 50%;
+  }
+
+  .hero-text h1 {
+    font-size: 7rem;
+  }
+
+}
+
 .tagline {
-  display: block;
   font-size: 1.25rem;
   letter-spacing: .15rem;
 }
@@ -108,12 +134,6 @@ img {
   margin: .5rem auto;
 }
 
-.hero-text h1 {
-  font-size: 3.15rem;
-  color: #d2ba87;
-  margin-bottom: 0; /* To negate the effect of the single-direction margin declaration. */
-}
-
 .date {
   font-size: 1.25rem;
   letter-spacing: .15rem;
@@ -131,20 +151,6 @@ img {
   margin: 0 .5rem;
 }
 
-@media (min-width: 768px) {
-
-  .hero-text {
-    padding: 1.25rem;
-    border-radius: 4px;
-    width: 50%;
-  }
-
-  .hero-text h1 {
-    font-size: 7rem;
-  }
-
-}
-
 /* =============================
 
       LOCATIONS STYLES
@@ -159,8 +165,7 @@ img {
   font-weight: 700;
 }
 
-.blurb span {
-  display: block;
+.blurb div {
   font-family: 'Muli', sans-serif;
 }
 
@@ -217,7 +222,6 @@ img {
   letter-spacing: .025rem;
 }
 
-/* I want to center the content on desktop, is this an appropriate way? */
 @media (min-width: 768px) {
 
   .program-wrapper {
@@ -237,7 +241,7 @@ img {
   height: 7.5rem;
 }
 
-.gifts p:nth-of-type(2) {   /* To even out the bottom and top margins of this section. */
+.gifts p:last-child {   /* To even out the bottom and top margins of this section. */
   margin-bottom: 0;
 }
 
@@ -273,7 +277,7 @@ img {
   margin-bottom: 1.5rem;
 }
 
-.qa-column::after {
+.question-group::after {
   content: "";
   display: block;
   height: .1875rem;
@@ -284,7 +288,7 @@ img {
 
 @media (min-width: 768px) {
 
-  .qa-column {
+  .question-group {
     display: inline-block;
     width: 30%;
     vertical-align: top;
@@ -292,11 +296,11 @@ img {
     margin: .5rem;
   }
 
-  .qa-column::after {
+  .question-group::after {
     display: none;
   }
 
-  .qa-column h3 {
+  .question-group h3 {
     text-align: left;
   }
 
@@ -308,7 +312,6 @@ img {
 
 =============================*/
 
-/* This entire section is a code loan, refactor to flexbox when have the chance. */
 footer {
   height: 10vh;
   width: 100vw;
@@ -326,8 +329,11 @@ footer {
   padding: .5rem 1rem;
 }
 
+footer p {
+  margin-bottom: 0;
+}
+
 footer small {
-  display: block;
   line-height: 1.5;
 }
 
