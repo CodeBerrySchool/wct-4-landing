@@ -1,4 +1,4 @@
-# Website Creator Track - Project 3. – Wedding Landing Page
+# Website Creator Track - Lesson 4. – Wedding Landing Page
 
 > Create a stunning wedding website using HTML and CSS.
 

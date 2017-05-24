@@ -265,16 +265,7 @@ a:hover {
 
 .faq p {
   font-family: 'Muli', sans-serif;
-  margin-bottom: .5rem;
   text-align: left;
-}
-
-.faq strong {
-  font-weight: 700;
-}
-
-.qa {
-  margin-bottom: 1.5rem;
 }
 
 .question-group::after {
@@ -304,6 +295,15 @@ a:hover {
     text-align: left;
   }
 
+}
+
+.question {
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.answer {
+  margin-bottom: 1.5rem;
 }
 
 /* =============================
