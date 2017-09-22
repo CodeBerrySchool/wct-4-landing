@@ -201,7 +201,7 @@ a:hover {
 =============================*/
 
 .program {
-  width: 100vw;
+  width: 100%;
   text-align: left;
   background: hsla(100,0%,0%,.6);
   color: #d2ba87;
@@ -255,7 +255,7 @@ a:hover {
 .faq {
   background: hsla(100,0%,0%,.6);;
   color: #d2ba87;
-  width: 100vw;
+  width: 100%;
   text-align: center;
 }
 
@@ -314,7 +314,7 @@ a:hover {
 
 footer {
   height: 10vh;
-  width: 100vw;
+  width: 100%;
   background-color: #606060;
   color: #fff;
   font-family: 'Muli', sans-serif;
